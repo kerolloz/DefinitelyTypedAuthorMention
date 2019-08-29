@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Auto Mention</title>
+
+    <!-- You MUST include jQuery before Fomantic -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.7.7/dist/semantic.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.7.7/dist/semantic.min.js"></script>
+  </head>
+  <body>
+    <style>
+      .ui.vertical.stripe {
+        padding: 5em 0em;
+      }
+    </style>
+    <div
+      class="ui inverted vertical masthead center aligned segment vertical stripe"
+    >
+      <div class="ui text container">
+        <h1 class="ui inverted blue header">
+          DefintelyTyped Authors Mention Helper
+        </h1>
+        <h3>A simple way to mention all the authors of a package!</h3>
+      </div>
+    </div>
+
+    <div class="ui middle aligned centered grid vertical stripe">
+      <div class="row">
+        <div class="ui container">
+          <form class="ui form huge">
+            <div class="inline field">
+              <div class="ui labeled input">
+                <label class="ui label">@types/</label>
+                <input
+                  type="text"
+                  placeholder="package name"
+                  id="package-name"
+                  required
+                />
+              </div>
+            </div>
+            <button class="ui teal labeled icon button" type="submit">
+              <i class="group icon"></i>
+              Get Authors
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="ui container">
+          <div class="ui statistic">
+            <div class="value">
+              0
+            </div>
+            <div class="label">
+              Authors Found
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="ui container">
+          <button class="ui button labeled icon grey" id="copy">
+            <i class="clipboard icon"></i>
+            Copy Authors Mentions
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="ui container">
+          <div
+            class="ui large horizontal divided list"
+            id="list-of-authors"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <div class="ui inverted vertical footer segment">
+      <div class="ui container">
+        <div class="ui stackable inverted divided equal height stackable grid">
+          <div class="three wide column">
+            <h4 class="ui inverted header">About</h4>
+            <div class="ui inverted link list">
+              <a
+                class="github-button item"
+                href="https://github.com/kerolloz"
+                data-show-count="true"
+                aria-label="Follow @kerolloz on GitHub"
+                >Follow @kerolloz</a
+              >
+              <a
+                class="github-button item"
+                href="https://github.com/kerolloz/DefinitelyTypedAuthorMention/subscription"
+                data-icon="octicon-eye"
+                data-show-count="true"
+                aria-label="Watch kerolloz/DefinitelyTypedAuthorMention on GitHub"
+                >Watch</a
+              >
+              <br />
+
+              <a
+                class="github-button item"
+                href="https://github.com/kerolloz/DefinitelyTypedAuthorMention/issues"
+                data-icon="octicon-issue-opened"
+                data-show-count="true"
+                aria-label="Issue kerolloz/DefinitelyTypedAuthorMention on GitHub"
+                >Issue</a
+              >
+
+              <br />
+              <a
+                class="github-button item"
+                href="https://github.com/kerolloz/DefinitelyTypedAuthorMention"
+                data-icon="octicon-star"
+                data-show-count="true"
+                aria-label="Star kerolloz/DefinitelyTypedAuthorMention on GitHub"
+                >Star</a
+              >
+              <br />
+
+              <a
+                class="github-button item"
+                href="https://github.com/kerolloz/DefinitelyTypedAuthorMention/fork"
+                data-icon="octicon-repo-forked"
+                data-show-count="true"
+                aria-label="Fork kerolloz/DefinitelyTypedAuthorMention on GitHub"
+                >Fork</a
+              >
+            </div>
+          </div>
+
+          <div class="seven wide column">
+            <h4 class="ui inverted header"></h4>
+            <p>
+              An OpenSource Project By Kerollos Magdy.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Place this tag where you want the button to render. -->
+    </div>
+
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
